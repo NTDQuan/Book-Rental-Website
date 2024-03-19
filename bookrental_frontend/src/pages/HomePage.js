@@ -1,3 +1,4 @@
+import Footer from "../Components/Footer/Footer.js";
 import CoverImage from "../image/home_cover.jpg"
 import "./style/HomePage.css"
 
@@ -15,7 +16,7 @@ function HomePage() {
                     <a>Welcome to Rent A Book !</a>
                 </div>
             </div>
-            
+            <Footer/>
         </div>
 
     );
