@@ -1,10 +1,13 @@
 import Button from '@mui/material/Button';
+import { Link } from "react-router-dom"
 import "./ToolBar.css"
 
 const ToolBarDefault = () => {
     return (
         <div className="ToolBar_default">
-            <button className='Login_button' type='button'>Login</button>
+            <Link to="/login">
+                <button className='Login_button' type='button'>Login</button>
+            </Link>
         </div>
     )
 }
