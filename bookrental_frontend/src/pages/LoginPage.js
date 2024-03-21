@@ -1,21 +1,19 @@
-import CoverImage from "../image/home_cover.jpg"
 import CoverImageComponent from "../Components/CoverImage/CoverImageComponent.js"
-import "./style/HomePage.css"
+import LoginForm from "../Components/Login/LoginForm.js";
+import "./style/LoginPage.css"
 
-function HomePage() {
-    return(
+function LoginPage() {
+    return (
         <div className="Wrapper">
             <CoverImageComponent
                 content={
-                    <div className="Home_Cover_Text">
-                        <a>Welcome to Rent A Book !</a>
+                    <div className="Login_Form">
+                        <LoginForm/>
                     </div>
                 }
-            
             />
         </div>
-
     );
 }
 
-export default HomePage;
+export default LoginPage
