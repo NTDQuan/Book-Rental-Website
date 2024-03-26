@@ -5,7 +5,7 @@ import "./ToolBar.css"
 const ToolBarDefault = () => {
     return (
         <div className="ToolBar_default">
-            <Link to="/login">
+            <Link to="/auth/login">
                 <button className='Login_button' type='button'>Login</button>
             </Link>
         </div>

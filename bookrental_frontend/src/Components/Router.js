@@ -14,8 +14,13 @@ const RouterOutlet = () => {
             element: <ShopPage/>
         },
         {
-            path: "/login",
-            element: <LoginPage/>
+            path: "/auth",
+            children: [
+                {
+                    path: 'login',
+                    element: <LoginPage/>  
+                },
+            ],
         }
     ]);
 
