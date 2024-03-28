@@ -1,16 +1,24 @@
 import './App.css';
-import { Routes, Route } from "react-router-dom"
-import NavBar from './Components/NavBar/NavBar.js';
-import RouterOutlet from '../src/Components/Router.js'
-import ShopPage from './pages/ShopPage.js';
-import Footer from './Components/Footer/Footer.js';
-import HomePage from './pages/HomePage.js'
-import LoginPage from './pages/LoginPage.js'
+import Navbar from './Components/Navbar/Navbar.jsx'
+import Footer from './Components/Footer/Footer.jsx'
+import Home from './Pages/Home.jsx'
+import Brower from './Pages/Brower.jsx'
+import About from './Pages/About.jsx'
+import Cart from './Pages/Cart.jsx'
+import LoginSignup from './Pages/LoginSignup.jsx'
+import { Routes, Route } from 'react-router-dom';
+
 function App() {
     return (
         <div>
-            <NavBar/>
-            <RouterOutlet/>
+            <Navbar/>
+            <Routes>
+                <Route path='/' element={<Home/>}/>
+                <Route path='/brower' element={<Brower/>}/>
+                <Route path='/about' element={<About/>}/>
+                <Route path='/cart' element={<Cart/>}/>
+                <Route path='/login' element={<LoginSignup/>}/>
+            </Routes>
             <Footer/>
         </div>       
     );
