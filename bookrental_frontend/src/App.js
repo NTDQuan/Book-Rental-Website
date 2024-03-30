@@ -6,20 +6,23 @@ import Brower from './Pages/Brower.jsx'
 import About from './Pages/About.jsx'
 import Cart from './Pages/Cart.jsx'
 import LoginSignup from './Pages/LoginSignup.jsx'
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
 function App() {
     return (
         <div>
-            <Navbar/>
-            <Routes>
-                <Route path='/' element={<Home/>}/>
-                <Route path='/brower' element={<Brower/>}/>
-                <Route path='/about' element={<About/>}/>
-                <Route path='/cart' element={<Cart/>}/>
-                <Route path='/login' element={<LoginSignup/>}/>
-            </Routes>
-            <Footer/>
+            <BrowserRouter>
+                <Navbar/>
+                <Routes>
+                    <Route path='/' element={<Home/>}/>
+                    <Route path='/brower' element={<Brower/>}/>
+                    <Route path='/about' element={<About/>}/>
+                    <Route path='/cart' element={<Cart/>}/>
+                    <Route path='/login' element={<LoginSignup/>}/>
+                </Routes>
+                <Footer/>
+            </BrowserRouter>
+            
         </div>       
     );
 }
