@@ -16,7 +16,7 @@ let data_product = [
         old_price: 80000,
     },
     {
-        id: 1,
+        id: 3,
         title: "Konosuba3",
         image: default_img,
         new_price: 50000,
