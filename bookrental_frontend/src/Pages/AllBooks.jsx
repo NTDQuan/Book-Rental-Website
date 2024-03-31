@@ -1,22 +1,22 @@
 import React, { useContext } from 'react'
-import './CSS/Brower.css'
-import { ShopContext } from '../Context/ShopContext'
+import './CSS/AllBook.css'
+import { ShopContext } from '../Context/ShopContext.jsx'
 import dropdown_icon from '../Components/Assets/down.png'
 import Item from '../Components/Item/Item.jsx'
 
-const Brower = () => {
+const AllBooks = () => {
     const {data_product} = useContext(ShopContext);
     return (
-        <div className='brower'>
-            <div className="brower-indexSort">
+        <div className='allbook'>
+            <div className="allbook-indexSort">
                 <p>
                     <span>Showing 1-22</span> out of 36 product
                 </p>
-                <div className="brower-sort">
-                    Sort by <img src="" alt=""/>
+                <div className="allbook-sort">
+                    Sort by <img src={dropdown_icon} alt=""/>
                 </div>
             </div>
-            <div className="brower-products">
+            <div className="allbook-products">
                 {data_product.map((item, i) => {
                     if (data_product == null) {
                         return null
@@ -25,11 +25,11 @@ const Brower = () => {
                     }
                 })}
             </div>
-            <div className='brower-loadmore'>
+            <div className='allbook-loadmore'>
                 Explore More
             </div>
         </div>
     )
 }
 
-export default Brower
+export default AllBooks

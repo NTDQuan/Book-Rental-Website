@@ -1,11 +1,12 @@
 import React from 'react'
 import './Item.css'
+import { Link } from 'react-router-dom'
 
 const Item = (props) => {
     return (
         <div className='item'>
             <div className="item-image">
-                <img src={props.image} alt=""/>
+                <Link to={`/book/${props.id}`}><img src={props.image} alt=""/></Link>
             </div>
             <p>{props.title}</p>
             <div className='item-prices'>
